@@ -1,0 +1,49 @@
+[package]
+name = "rs-arrow-ipc-stream-head"
+version = "0.1.0"
+edition = "2024"
+
+[lints.rust]
+unsafe_code = "forbid"
+
+[lints.clippy]
+unwrap_used = "forbid"
+expect_used = "forbid"
+
+[profile.release-wasi]
+inherits = "release"
+lto = true
+strip = true
+opt-level = 's'
+codegen-units = 16
+
+[dependencies]
+arrow-select = { version = "56", default-features = false }
+
+[dependencies.arrow-ipc]
+version = "56"
+default-features = false
+features = [
+]
+
+[dependencies.arrow]
+version = "56"
+default-features = false
+features = [
+]
+
+[dependencies.arrow-array]
+version = "56"
+default-features = false
+features = [
+]
+
+[dependencies.arrow-schema]
+version = "56"
+default-features = false
+features = [
+]
+
+[[bin]]
+name = "arrow-ipc-stream-head"
+path = "src/bin/arrow-ipc-stream-head.rs"
