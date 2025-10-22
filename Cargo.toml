@@ -3,6 +3,13 @@ name = "rs-arrow-ipc-stream-head"
 version = "0.1.0"
 edition = "2024"
 
+description = "Prints the head rows of the ipc stream."
+license = "Apache-2.0"
+repository = "https://github.com/takanoriyanagitani/rs-arrow-ipc-stream-head"
+homepage = "https://github.com/takanoriyanagitani/rs-arrow-ipc-stream-head"
+documentation = "https://docs.rs/rs-arrow-ipc-stream-head/latest"
+keywords = ["arrow", "ipc", "stream", "head"]
+
 [lints.rust]
 unsafe_code = "forbid"
 
